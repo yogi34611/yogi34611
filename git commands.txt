@@ -1,0 +1,178 @@
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git (master)
+$ git config --global user.name"yogi34611"
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git (master)
+$ git config --global user.email"yogi34611@gmail.com"
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git (master)
+$ mkdir project
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git (master)
+$ cd project
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ touch task.txt
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ vi task.txt
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git init
+Initialized empty Git repository in C:/Users/admin/Desktop/Git/project/.git/
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        task.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git add task.txt
+warning: in the working copy of 'task.txt', LF will be replaced by CRLF the next
+ time Git touches it
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   task.txt
+
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git comitt -m "first task"
+git: 'comitt' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git commit -m "first task"
+[master (root-commit) 16f012a] first task
+ 1 file changed, 1 insertion(+)
+ create mode 100644 task.txt
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git log
+commit 16f012aef363fe8dba3cfa53bd839f731aad9f9f (HEAD -> master)
+Author: yogi34611 <yogi34611@gamil.com>
+Date:   Wed Oct 30 09:29:56 2024 +0530
+
+    first task
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git remote add project https://github.com/yogi34611/project.git
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git remote -v
+project https://github.com/yogi34611/project.git (fetch)
+project https://github.com/yogi34611/project.git (push)
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git push -u project master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 229 bytes | 45.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/yogi34611/project.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'project/master'.
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ touch task2.txt
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ vi task2.txt
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git status
+On branch master
+Your branch is up to date with 'project/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        task2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git add task2.txt
+warning: in the working copy of 'task2.txt', LF will be replaced by CRLF the next time Git touches it
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git status
+On branch master
+Your branch is up to date with 'project/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   task2.txt
+
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git remote -v
+project https://github.com/yogi34611/project.git (fetch)
+project https://github.com/yogi34611/project.git (push)
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git push -u project master
+branch 'master' set up to track 'project/master'.
+Everything up-to-date
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git log
+commit 16f012aef363fe8dba3cfa53bd839f731aad9f9f (HEAD -> master, project/master)
+Author: yogi34611 <yogi34611@gamil.com>
+Date:   Wed Oct 30 09:29:56 2024 +0530
+
+    first task
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git push -u project master
+branch 'master' set up to track 'project/master'.
+Everything up-to-date
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git remote add project https://github.com/yogi34611/project.git
+error: remote project already exists.
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git remote -v
+project https://github.com/yogi34611/project.git (fetch)
+project https://github.com/yogi34611/project.git (push)
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git push -u project master
+branch 'master' set up to track 'project/master'.
+Everything up-to-date
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git commit -m "second"
+[master 1322023] second
+ 1 file changed, 1 insertion(+)
+ create mode 100644 task2.txt
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$ git push -u project master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 274 bytes | 91.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/yogi34611/project.git
+   16f012a..1322023  master -> master
+branch 'master' set up to track 'project/master'.
+
+admin@DESKTOP-81T59E2 MINGW64 ~/Desktop/Git/project (master)
+$
+
